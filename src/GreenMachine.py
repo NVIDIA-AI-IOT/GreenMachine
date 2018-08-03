@@ -174,8 +174,7 @@ def predict(model, image, score_thresh, screen_mode, fill):
     else:
         new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
         cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
-
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Go through each bounding box and only draw and save the ones above the score threshold
     detected = []
