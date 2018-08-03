@@ -1,6 +1,6 @@
 # GreenMachine
 
-![GreenMachine](logo.png)
+![GreenMachine](greenmachinelogo.png)
 
 Green Machine is a deep learning intern project that detects common cafeteria objects and projects bounding boxes onto the objects in AR.
 
