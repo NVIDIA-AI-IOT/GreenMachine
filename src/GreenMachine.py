@@ -156,7 +156,7 @@ def matchBBoxes(curr_bboxes, prev_bboxes, similarity_threshold):
 
     return matched_indices
             
-def predict(model, image, score_thresh, fill):
+def predict(model, image, score_thresh, screen_mode, fill):
     """ Predict objects on an image.
     model (Model) - The model to predict with.
     image (nd.nparray) - The image to predict on.
@@ -169,8 +169,11 @@ def predict(model, image, score_thresh, fill):
     scores, boxes, classes = model.predict(image)
     
     # Prepare the images for augmentation
-    new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
-    cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
+    if screen_mode:
+        new_image = image
+    else:
+        new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
+        cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
 
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -284,7 +287,7 @@ def main():
     print "Starting Inference..."
     while True:
         read_img = camera.read()
-        image = predict(model, read_img, score_thresh, fill)
+        image = predict(model, read_img, score_thresh, screen_mode, fill)
         # Show inference only if camera is ready
         if image is not None:
             cv2.imshow("Inference", image)
