@@ -1,10 +1,10 @@
 # GreenMachine
 
-![GreenMachine](greenmachinelogo.png)
+![GreenMachine](logo.png)
 
 Green Machine is a deep learning intern project that detects common cafeteria objects and projects bounding boxes onto the objects in AR.
 
-**This project is open-source under an MIT license**
+**This project is open-source under an MIT license.**
 
 ---
 
@@ -25,19 +25,18 @@ Download [this TensorFlow wheel](https://nvidia.app.box.com/v/TF180-Py27-wTRT) a
 
 Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
-Press `Ctrl+Alt+T` to open a terminal.
-
-Download GreenMachine (type into the terminal, without the `$`):
+In the terminal, type this (without the `$`) to download GreenMachine: 
 
 ```bash
 $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 ```
 
-Then install GreenMachine and it's dependencies:
+Then install GreenMachine and its dependencies:
 
 ```bash
+$ cd ..
 $ cd GreenMachine/src
-$ python GreenMachine --install
+$ python GreenMachine.py --install
 ```
 
 Finally, install tf_trt_models:
@@ -199,15 +198,15 @@ EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1]
 
 **EnviroNet Classes:**
 
-* cup (Cup/Soup Bowl)
-* rutensil (Silverware)
-* tutensil (Plastic Utensils)
-* container (Containers and To-Go Boxes)
-* plate (Bowls and Plates)
-* paper (Napkins)
-* stick (Chopsticks and Coffe Stirrers)
-* bottle (Water and Drink Bottles)
-* wrapper (Food and Candy Wrappers)
+* cup (cup/soup bowls)
+* rutensil (silverware)
+* tutensil (plastic utensils)
+* container (paper containers and to-go boxes)
+* plate (bowls and plates)
+* paper (napkins)
+* stick (chopsticks and coffee stirrers)
+* bottle (water and drink Bottles)
+* wrapper (food and candy wrappers)
 
 ### Inference
 
@@ -220,7 +219,7 @@ Inference is done on a Jetson TX2 with TensorFlow's [object detection API](https
 * Inference + Draw bboxes: 45 ms (22.2 fps)
 * Inference + Draw bboxes + Render: 51 ms (19.6 fps)
 
-**INSERT INFERENCE PICTURE HERE**
+![Inference image](inference.jpg)
 
 ### Authors
 
