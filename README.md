@@ -15,7 +15,7 @@ Green Machine is a deep learning intern project that detects common cafeteria ob
 * A [Jetson TX2](https://developer.nvidia.com/embedded/buy/jetson-tx2) flashed with [Jetpack 3.2](https://developer.nvidia.com/embedded/dlc/jetpack-l4t-3_2_1) (The TX2 developer kit comes pre-flashed)
 * A CSI Camera (Included in the developer kit)
 * A 720p or greater projector (optional)
-* A Host machine running Ubuntu 16.04 (Only if you DON'T have the developer kit)
+* A host machine running Ubuntu 16.04 (Only if you DON'T have the developer kit)
 
 ### Install GreenMachine
 
@@ -33,7 +33,15 @@ Download GreenMachine (type into the terminal, without the `$`):
 $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 ```
 
-Then install GreenMachine and it's dependencies:
+Then install tf_trt_models:
+
+```bash
+$ git clone --recursive https://github.com/NVIDIA-Jetson/tf_trt_models.git
+$ cd tf_trt_models
+$ ./install.sh
+```
+
+Finally, install GreenMachine and it's dependencies:
 
 ```bash
 $ cd GreenMachine/src
@@ -103,6 +111,8 @@ $ git clone --recursive https://github.com/NVIDIA-Jetson/tf_trt_models.git
 $ cd tf_trt_models
 $ ./install.sh
 ```
+
+Finally, follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
 **Download GreenMachine:**
 
