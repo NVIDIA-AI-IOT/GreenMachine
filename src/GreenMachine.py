@@ -29,7 +29,7 @@ import tensorflow as tf
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 # Directory of the model data
-DATA_DIR = os.path.abspath('../models/LunchNet/')
+DATA_DIR = os.path.abspath('../models/EnviroNet/')
 
 # Relates class numbers to their colors
 COLOR_DICT = {
