@@ -219,7 +219,7 @@ Inference is done on a Jetson TX2 with TensorFlow's [object detection API](https
 * Inference + Draw bboxes: 45 ms (22.2 fps)
 * Inference + Draw bboxes + Render: 51 ms (19.6 fps)
 
-**INSERT INFERENCE PICTURE HERE**
+[Inference image](inference.jpg)
 
 ### Authors
 
