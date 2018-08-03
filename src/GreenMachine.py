@@ -170,11 +170,10 @@ def predict(model, image, score_thresh, screen_mode, fill):
     
     # Prepare the images for augmentation
     if screen_mode:
-        new_image = image
+        new_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     else:
-        new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
-        cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        new_image = np.zeros((image.shape[0], image.shape[1], 3), dtype=np.uint8)
+        cv2.rectangle(new_image, (0, 0), (image.shape[1], image.shape[0]), (255, 0, 0), 5)
 
     # Go through each bounding box and only draw and save the ones above the score threshold
     detected = []
