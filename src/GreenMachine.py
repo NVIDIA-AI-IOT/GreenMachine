@@ -213,7 +213,7 @@ def predict(model, image, score_thresh, screen_mode, fill):
                 y1 = ((y1 * num_pairs) + prev_bboxes[index_pair[1]][2]) / (num_pairs + 1.0)
                 
         line_type = 3
-        if fill:
+        if fill and not screen_mode:
             line_type = cv2.FILLED
             
         cv2.rectangle(new_image, (int(x0), int(y0)), (int(x1), int(y1)), color, line_type)
