@@ -156,7 +156,7 @@ def matchBBoxes(curr_bboxes, prev_bboxes, similarity_threshold):
 
     return matched_indices
             
-def predict(model, image, score_thresh, screen_mode, fill):
+def predict(model, image, score_thresh, fill):
     """ Predict objects on an image.
     model (Model) - The model to predict with.
     image (nd.nparray) - The image to predict on.
@@ -167,18 +167,12 @@ def predict(model, image, score_thresh, screen_mode, fill):
 
     # Run the prediction
     scores, boxes, classes = model.predict(image)
-
+    
     # Prepare the images for augmentation
+    new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
+    cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
+
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    if screen_mode:
-        new_image = np.zeros((1080, 1920, 3), dtype=np.uint8) + 80
-        border = np.zeros((image.shape[0] + 40, image.shape[1] + 40, 3), dtype=np.uint8)
-        new_image[20:20+border.shape[0], 20:20+border.shape[1]] = border
-        new_image[40:40+image.shape[0], 40:40+image.shape[1]] = image
-    else:
-        new_image = np.zeros((1080, 1920, 3), dtype=np.uint8)
-        #new_image = image
-        cv2.rectangle(new_image, (0, 0), (1920, 1080), (255, 0, 0), 5)
 
     # Go through each bounding box and only draw and save the ones above the score threshold
     detected = []
@@ -245,7 +239,8 @@ def main():
 
     # Create an OpenCV window
     cv2.namedWindow("Inference", cv2.WND_PROP_FULLSCREEN)
-    cv2.setWindowProperty("Inference", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    if not screen_mode:
+        cv2.setWindowProperty("Inference", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     empty = np.zeros((1080, 1920, 3), dtype=np.uint8)
     cv2.waitKey(50)
     cv2.putText(empty, "Loading...", (441, 387), cv2.FONT_HERSHEY_DUPLEX, 2.5, (0, 255, 0), lineType=cv2.LINE_AA)
@@ -289,7 +284,7 @@ def main():
     print "Starting Inference..."
     while True:
         read_img = camera.read()
-        image = predict(model, read_img, score_thresh, screen_mode, fill)
+        image = predict(model, read_img, score_thresh, fill)
         # Show inference only if camera is ready
         if image is not None:
             cv2.imshow("Inference", image)
