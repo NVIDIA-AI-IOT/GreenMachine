@@ -198,15 +198,15 @@ EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1]
 
 **EnviroNet Classes:**
 
-* cup (Cup/Soup Bowl)
-* rutensil (Silverware)
-* tutensil (Plastic Utensils)
-* container (Containers and To-Go Boxes)
-* plate (Bowls and Plates)
-* paper (Napkins)
-* stick (Chopsticks and Coffe Stirrers)
-* bottle (Water and Drink Bottles)
-* wrapper (Food and Candy Wrappers)
+* cup (cup/soup bowls)
+* rutensil (silverware)
+* tutensil (plastic utensils)
+* container (paper containers and to-go boxes)
+* plate (bowls and plates)
+* paper (napkins)
+* stick (chopsticks and coffee stirrers)
+* bottle (water and drink Bottles)
+* wrapper (food and candy wrappers)
 
 ### Inference
 
