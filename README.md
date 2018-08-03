@@ -33,19 +33,19 @@ Download GreenMachine (type into the terminal, without the `$`):
 $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 ```
 
-Then install tf_trt_models:
+Then install GreenMachine and it's dependencies:
+
+```bash
+$ cd GreenMachine/src
+$ python GreenMachine --install
+```
+
+Finally, install tf_trt_models:
 
 ```bash
 $ git clone --recursive https://github.com/NVIDIA-Jetson/tf_trt_models.git
 $ cd tf_trt_models
 $ ./install.sh
-```
-
-Finally, install GreenMachine and it's dependencies:
-
-```bash
-$ cd GreenMachine/src
-$ python GreenMachine --install
 ```
 
 ### Run GreenMachine
