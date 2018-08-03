@@ -25,19 +25,18 @@ Download [this TensorFlow wheel](https://nvidia.app.box.com/v/TF180-Py27-wTRT) a
 
 Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
-Press `Ctrl+Alt+T` to open a terminal.
-
-Download GreenMachine (type into the terminal, without the `$`):
+In the terminal, type this (without the `$`) to download GreenMachine: 
 
 ```bash
 $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 ```
 
-Then install GreenMachine and it's dependencies:
+Then install GreenMachine and its dependencies:
 
 ```bash
+$ cd ..
 $ cd GreenMachine/src
-$ python GreenMachine --install
+$ python GreenMachine.py --install
 ```
 
 Finally, install tf_trt_models:
