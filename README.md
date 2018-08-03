@@ -194,7 +194,9 @@ $ ./install.sh
 
 ### EnviroNet
 
-EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). It detects and classifies nine different types of objects commonly found in cafeterias and kitchens. You can learn more about EnviroNet [here](link_to_wiki) .
+EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). It detects and classifies nine different types of objects commonly found in cafeterias and kitchens. You can learn more about EnviroNet [here](link_to_wiki).
+
+Coming to a trashcan near you!
 
 **EnviroNet Classes:**
 
@@ -219,7 +221,7 @@ Inference is done on a Jetson TX2 with TensorFlow's [object detection API](https
 * Inference + Draw bboxes: 45 ms (22.2 fps)
 * Inference + Draw bboxes + Render: 51 ms (19.6 fps)
 
-![Inference image](inference.jpg)
+![Inference image](https://i.imgur.com/O4THRUX.jpg)
 
 ### Authors
 
