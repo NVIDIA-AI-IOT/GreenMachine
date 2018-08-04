@@ -1,8 +1,7 @@
-# GreenMachine
 
 ![GreenMachine](logo.png)
 
-Green Machine is a deep learning intern project that detects common cafeteria objects and projects bounding boxes onto the objects in AR.
+Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto the objects in AR. The goal is to quickly and clearly identify objects so users can simply place down their trays and easily categorize their waste, thus helping NVIDIA do its part in reducing landfill buildup.
 
 **This project is open-source under an MIT license.**
 
