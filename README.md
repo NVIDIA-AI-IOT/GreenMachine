@@ -3,7 +3,7 @@
 
 Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto the objects in AR. The goal is to quickly and clearly identify objects so users can simply place down their trays and easily categorize their waste, thus helping NVIDIA do its part in reducing landfill buildup.
 
-**This project is open-source under an MIT license.**
+**This project is open-source under an MIT license. See LICENSE.md**
 
 ---
 
@@ -23,8 +23,6 @@ Turn on your Jetson and log in.
 
 Download [this TensorFlow wheel](https://nvidia.app.box.com/v/TF180-Py27-wTRT) and move it to your home directory.
 
-Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
-
 In a terminal window, type this (without the `$`) to download GreenMachine: 
 
 ```bash
@@ -38,6 +36,8 @@ $ cd ..
 $ cd GreenMachine/src
 $ python GreenMachine.py --install
 ```
+
+Next, Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
 Finally, install tf_trt_models:
 
