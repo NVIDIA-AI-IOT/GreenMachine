@@ -5,6 +5,8 @@ Green Machine is a deep learning intern project that detects cafeteria objects a
 
 **This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
+![Inference image](https://i.imgur.com/O4THRUX.jpg)
+
 ---
 
 ## Quickstart Guide
@@ -220,8 +222,6 @@ Inference is done on a Jetson TX2 with TensorFlow's [object detection API](https
 * Inference: 40 ms (25.0 fps)
 * Inference + Draw bboxes: 45 ms (22.2 fps)
 * Inference + Draw bboxes + Render: 51 ms (19.6 fps)
-
-![Inference image](https://i.imgur.com/O4THRUX.jpg)
 
 ### Authors
 
