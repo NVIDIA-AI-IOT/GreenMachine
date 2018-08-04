@@ -1,5 +1,5 @@
 # XLT Labeling Tool
-A simple image labeling tool that generates KITTI label files
+A simple image labeling tool that generates KITTI label files, created by Isaac Wilcove during summer 2018.
 
 ## Running XLT
 
