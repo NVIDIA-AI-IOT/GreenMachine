@@ -1,4 +1,4 @@
-# XLT Labeling Tool
+﻿# XLT Labeling Tool
 A simple image labeling tool that generates KITTI label files, created by Isaac Wilcove during summer 2018.
 
 ## Running XLT
@@ -35,14 +35,14 @@ If you want to use your XLT labels for training Tensorflow models, you can conve
 
 Just change the following 3 variables in the script to configure the conversion:
 
-data_path - the path to your dataset. Do not include the `/labels/` folder
+`data_path` - the path to your dataset. Do not include the `/labels/` folder at the end of the path.
 
-class_key - Change this dict to match the class numbers used in XLT to their names. Format for each item is as follows, with each item on a new line separated by commas:
+`class_key` - Change this dict to match the class numbers used in XLT to their names. Format for each item is as follows, with each item on a new line separated by commas:
 
 `[class number]: b[class name]`
 
-saveas_filename - the name fo the file to save. The file naming format is as follows:
+`saveas_filename` - the name of the file to save. The file naming format is as follows:
 
 `[name].tfrecord`
 
-To run the script, just run `python kitti-to-tfrecord.py`
+To run the script, just run `python kitti-to-tfrecord.py`.
