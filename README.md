@@ -1,6 +1,6 @@
 ![GreenMachine](logo.png)
 
-Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to enable users to quickly know in which bin to throw their waste.
+Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know which bin to throw their waste in, avoiding confusion and guessing.
 
 **This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
@@ -152,9 +152,10 @@ After two to three minutes, the loading screen should disappear and you should b
 
 Try these debugging steps:
 
-1. Make sure you have a camera that is connected to a CSI port, not USB
-2. Check that the camera is using port 0
-3. Disconnect all USB devices that aren't your mouse or keyboard
+1. Make sure you have a camera that is connected to the Jetson via CSI, not USB.
+2. Check that the camera is using port 0.
+3. Disconnect all USB devices that aren't your mouse or keyboard.
+4. Delete and reinstall GreenMachine and it's dependencies.
 
 **Module not found:**
 
