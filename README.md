@@ -15,16 +15,17 @@ Green Machine is a deep learning intern project that detects cafeteria objects a
 * A CSI Camera (Included in the developer kit)
 * A 720p or greater projector (optional)
 * A host machine running Ubuntu 16.04 (Only if you DON'T have the developer kit)
+Refer to the hardware page in the wiki for more information.
 
 ### Install GreenMachine
 
-Turn on your Jetson and log in with the username `nvidia` and password `nvidia`.
+Turn on your Jetson and log in.
 
 Download [this TensorFlow wheel](https://nvidia.app.box.com/v/TF180-Py27-wTRT) and move it to your home directory.
 
 Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
-In the terminal, type this (without the `$`) to download GreenMachine: 
+In a terminal window, type this (without the `$`) to download GreenMachine: 
 
 ```bash
 $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
