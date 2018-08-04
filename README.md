@@ -1,7 +1,6 @@
-
 ![GreenMachine](logo.png)
 
-Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto the objects in AR. The goal is to quickly and clearly identify objects so users can simply place down their trays and easily categorize their waste, thus helping NVIDIA do its part in reducing landfill buildup.
+Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to enable users to quickly know in which bin to throw their waste.
 
 **This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
@@ -15,9 +14,7 @@ Green Machine is a deep learning intern project that detects cafeteria objects a
 
 * A [Jetson TX2](https://developer.nvidia.com/embedded/buy/jetson-tx2) flashed with [Jetpack 3.2](https://developer.nvidia.com/embedded/dlc/jetpack-l4t-3_2_1) (The TX2 developer kit comes pre-flashed)
 * A CSI Camera (Included in the developer kit)
-* A 720p or greater projector (optional)
-* A host machine running Ubuntu 16.04 (Only if you DON'T have the developer kit)
-Refer to the hardware page in the wiki for more information.
+* A 720p or greater projector (Optional)
 
 ### Install GreenMachine
 
@@ -72,14 +69,14 @@ $ python GreenMachine.py --screen
 
 **Hardware:**
 
-* Jetson TX2
-* CSI Camera (Included in Jetson TX2 Developer Kit)
-* 720p Projector (Optional)
+* A Jetson TX2
+* A CSI Camera (Included in Jetson TX2 Developer Kit)
+* A 720p Projector (Optional)
 
 **Software:**
 
-* JetPack 3.2 (Pre-Flahsed in the Jetson TX2 Developer Kit)
-* A Host Machine running Ubuntu 16.04 (Only if you DON'T have the developer kit)
+* A JetPack 3.2 (Pre-Flahsed in the Jetson TX2 Developer Kit)
+* A Host Machine running Ubuntu 16.04 (Optional, only needed for training)
 
 ### Setup
 
@@ -196,9 +193,7 @@ $ ./install.sh
 
 ### EnviroNet
 
-EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). It detects and classifies nine different types of objects commonly found in cafeterias and kitchens. You can learn more about EnviroNet [here](link_to_wiki).
-
-Coming to a trashcan near you!
+EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). It detects and classifies nine different types of objects commonly found in cafeterias and kitchens. You can learn more about EnviroNet [here](https://github.com/NVIDIA-Jetson/GreenMachine/wiki/Training).
 
 **EnviroNet Classes:**
 
@@ -211,6 +206,8 @@ Coming to a trashcan near you!
 * stick (chopsticks and coffee stirrers)
 * bottle (water and drink Bottles)
 * wrapper (food and candy wrappers)
+
+*EnviroNet: Coming to a trash can near you!*
 
 ### Inference
 
