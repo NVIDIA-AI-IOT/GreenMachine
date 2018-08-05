@@ -16,7 +16,7 @@ Click the "Open Directory" button at the bottom of the window and open the direc
 
 ### Creating and saving labels
 
-To create a label, first type your class name(s) in the boxes on the right. Select which class you would like to use with the radio buttons, and click to start placing a bounding box. This should create a green square. Move your mouse to the opposite corner of the object you are highlighting and click again. The green square should now turn a different color and stay in place. This means that the label is saved to the file. Label files are in the automatically generated labels folder in the same folder as the images. Labels are saved to the file as soon as you place them, so you can just close the application window when you are done labeling.
+To create a label, first type your class name(s) in the boxes on the right. Select which class you would like to use with the radio buttons, and click to start placing a bounding box. This should create a green square. Move your mouse to the other corner of the object you are highlighting and click again. The green square should now turn a different color and stay in place. This means that the label is saved to the file. Label files are in the labels folder that is automatically generated in the same folder as the images. Labels are saved to the file as soon as you place them, so you can just close the application window when you are done labeling.
 
 ### Keyboard Shortcuts
 `Del` - Deletes the most recently placed bounding box in the current image

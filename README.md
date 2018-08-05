@@ -1,8 +1,8 @@
 ![GreenMachine](logo.png)
 
-Green Machine is a deep learning intern project that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to quickly and clearly identify objects, making it easy for users to sort their waste and help NVIDIA do its part in reducing landfill buildup.
+Green Machine is a kiosk that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know which bin to throw their waste in, avoiding confusion and guessing.
 
-**This project is open source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
+**This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
 ![Inference image](https://i.imgur.com/O4THRUX.jpg)
 
@@ -18,7 +18,7 @@ Green Machine is a deep learning intern project that detects cafeteria objects a
 
 ### Install GreenMachine
 
-Turn on your Jetson and log in.
+Turn on your Jetson and log in with the username `nvidia` and password `nvidia`.
 
 Download [this TensorFlow wheel](https://nvidia.app.box.com/v/TF180-Py27-wTRT) and move it to your home directory.
 
@@ -36,7 +36,7 @@ $ cd GreenMachine/src
 $ python GreenMachine.py --install
 ```
 
-Next, follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
+Next, Follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup) to install the Argus Camera library.
 
 Finally, install tf_trt_models:
 
@@ -75,12 +75,12 @@ $ python GreenMachine.py --screen
 
 **Software:**
 
-* A JetPack 3.2 (Pre-flashed in the Jetson TX2 Developer Kit)
+* A JetPack 3.2 (Pre-Flahsed in the Jetson TX2 Developer Kit)
 * A Host Machine running Ubuntu 16.04 (Optional, only needed for training)
 
 ### Setup
 
-If you have a projector, you can see examples of projector/camera mounts on [this wiki page](https://github.com/wiki_link). It is difficult to set up a mount and match the projector's and camera's field of views, but once you do, projector mode can be used.
+If you have a projector, you can see examples of projector/camera mounts on [this wiki page](https://github.com/wiki_link). It is difficult to set up a mount and match the projector and camera's field of views, but once you do, projector mode can be used.
 
 If you just have a monitor or do not want to mount the projector, you can still run GreenMachine in screen mode. All you need for this mode is some sort of display.
 
@@ -122,7 +122,7 @@ $ git clone https://github.com/NVIDIA-Jetson/insert-link-here.git
 
 **Run GreenMachine:**
 
-If you have a projector setup, you will need to calibrate GreenMachine. You only need to run this before the first use or if you move the camera or projector.
+If you have a projector setup, you will need to calibrate GreenMachine. You only need to run this on the first run or if you move the camera or projector.
 
 ```bash
 $ python Calibrate.py
@@ -140,7 +140,7 @@ Or without a projector, use `--screen`:
 $ python GreenMachine.py --screen
 ```
 
-In the terminal, you should see the text "Loading...". After a few more seconds, a loading screen should appear on your projector or screen. If these do not happen, refer to [Common Errors](#Common%20Errors).
+In the terminal, you should see the text "Loading...". After a few more seconds, a loading screen should come up on your projector or screen. If these do not happen, refer to [Common Errors](#Common%20Errors).
 
 It should take about two to three minutes to load. This is to optimize the model for quick inferencing, and is only done on startup.
 
@@ -155,7 +155,7 @@ Try these debugging steps:
 1. Make sure you have a camera that is connected to the Jetson via CSI, not USB.
 2. Check that the camera is using port 0.
 3. Disconnect all USB devices that aren't your mouse or keyboard.
-4. Delete and reinstall GreenMachine and its dependencies.
+4. Delete and reinstall GreenMachine and it's dependencies.
 
 **Module not found:**
 
@@ -203,9 +203,9 @@ EnviroNet is a convolutional neural network trained on top of [MobileNet SSD v1]
 * tutensil (plastic utensils)
 * container (paper containers and to-go boxes)
 * plate (bowls and plates)
-* paper (napkins and wax paper)
+* paper (napkins)
 * stick (chopsticks and coffee stirrers)
-* bottle (water and drink bottles)
+* bottle (water and drink Bottles)
 * wrapper (food and candy wrappers)
 
 *EnviroNet: Coming to a trash can near you!*
@@ -218,8 +218,8 @@ Inference is done on a Jetson TX2 with TensorFlow's [object detection API](https
 
 * Create model/optimize: 122.5 seconds
 * Inference: 40 ms (25.0 fps)
-* Inference + draw bounding boxes: 45 ms (22.2 fps)
-* Inference + draw bounding boxes + render: 51 ms (19.6 fps)
+* Inference + Draw bboxes: 45 ms (22.2 fps)
+* Inference + Draw bboxes + Render: 51 ms (19.6 fps)
 
 ### Authors
 
