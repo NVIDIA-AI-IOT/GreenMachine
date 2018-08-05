@@ -1,6 +1,6 @@
 ![GreenMachine](logo.png)
 
-Green Machine is a kiosk that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know which bin to throw their waste in, avoiding confusion and guessing.
+GreenMachine is a kiosk that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know which bin to throw their waste in, avoiding confusion and guessing.
 
 **This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
@@ -117,7 +117,7 @@ Finally, follow [this guide](https://github.com/NVIDIA-Jetson/argus_camera#setup
 Clone the repo:
 
 ```bash
-$ git clone https://github.com/NVIDIA-Jetson/insert-link-here.git
+$ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 ```
 
 **Run GreenMachine:**
@@ -142,9 +142,7 @@ $ python GreenMachine.py --screen
 
 In the terminal, you should see the text "Loading...". After a few more seconds, a loading screen should come up on your projector or screen. If these do not happen, refer to [Common Errors](#Common%20Errors).
 
-It should take about two to three minutes to load. This is to optimize the model for quick inferencing, and is only done on startup.
-
-After two to three minutes, the loading screen should disappear and you should be able to inference on objects in front of the camera. If not, refer to [Common Errors](#Common%20Errors).
+After a few seconds, the loading screen should disappear and you should be able to inference on objects in front of the camera. If not, refer to [Common Errors](#Common%20Errors).
 
 ### Common Errors
 
@@ -187,6 +185,10 @@ $ ./install.sh
 ```
 
 4. Restart
+
+**If the model is running slowly:**
+
+Re-optimize the model with `python GreenMachine.py --build`
 
 ---
 
