@@ -1,6 +1,6 @@
 ![GreenMachine](logo.png)
 
-GreenMachine is a kiosk that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know which bin to throw their waste in, avoiding confusion and guessing.
+GreenMachine is a kiosk that detects cafeteria objects and projects colored boxes onto them based on their waste type (compost, recycling, trash, and reusable). The goal is to make it easy for people to quickly know in which bins to throw their waste, avoiding confusion and guessing.
 
 **This project is open-source under an MIT license. See [LICENSE.md](https://github.com/NVIDIA-Jetson/GreenMachine/blob/master/LICENSE.md).**
 
@@ -82,7 +82,7 @@ $ python GreenMachine.py --screen
 
 If you have a projector, you can see examples of projector/camera mounts on [this wiki page](https://github.com/wiki_link). It is difficult to set up a mount and match the projector and camera's field of views, but once you do, projector mode can be used.
 
-If you just have a monitor or do not want to mount the projector, you can still run GreenMachine in screen mode. All you need for this mode is some sort of display.
+If you only have a monitor or do not want to mount the projector, you can still run GreenMachine in screen mode. All you need for this mode is a display.
 
 If your Jetson is not already flashed (which it should be if you have the developer kit), follow [this guide](https://developer.download.nvidia.com/embedded/L4T/r27_Release_v1.0/BSP/l4t_quick_start_guide.txt?dmNEgaGVAc9lf3H4Zpt9Hgi42fvHQKaiiFg-JA2U0f8ZjHighQ-kr1B5TldAn1Ag88i12pHldQl0UjfzqQJvKO2ISDfm2PcVSgm9-DqbTjx2fUlFVeEONp0muUW2Y4edRduB2stirRPBYJFWhSpzWkp5VnOIXQwA0QY) to flash it before you start installation.
 
@@ -122,7 +122,7 @@ $ git clone https://github.com/NVIDIA-Jetson/GreenMachine
 
 **Run GreenMachine:**
 
-If you have a projector setup, you will need to calibrate GreenMachine. You only need to run this on the first run or if you move the camera or projector.
+If you have a projector setup, you will need to calibrate GreenMachine. You only need to run this initially or if you move the camera or projector. Make sure the lighting is dim enough for the projected QR codes to be detected properly.
 
 ```bash
 $ python Calibrate.py
